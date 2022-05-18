@@ -1,0 +1,17 @@
+thead {
+    background-color: #2277af;
+    color: aliceblue;
+}
+
+.table {
+    border: 2px solid #2277af;
+    width: fit-content;
+    margin-left: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2277af;
+}
+
+td {
+    text-align: center;
+    border: 2px solid #2277af;
+}

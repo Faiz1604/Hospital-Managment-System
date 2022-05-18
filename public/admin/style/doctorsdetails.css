@@ -1,0 +1,27 @@
+table {
+    border: 2px solid #2277af;
+}
+
+thead {
+    background-color: #2277af;
+    color: aliceblue;
+    border: 2px solid #2277af;
+}
+
+tbody {
+    color: #2277af;
+    border: 2px solid #2277af;
+    width: fit-content;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td {
+    text-align: center;
+    border: 2px solid #2277af;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

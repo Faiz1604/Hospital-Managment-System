@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="admin/style/doctorsdetails.css">
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <h1 style="text-align: center; color: aliceblue; background-color: #2277af;">DOCTORS DETAILS</h1>
+        <div class="container">
+            <div class="table-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>MobileNumber</td>
+                            <td>Email</td>
+                            <td>IdNumber</td>
+                            <td>Address</td>
+                            <td>Gender</td>
+                            <td>Specialities</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var index= 0; index<doctorsData.length;index++) {%>
+                            <tr>
+                                <td>
+                                    <%= doctorsData[index].firstname+" "+ doctorsData[index].lastname %>
+                                </td>
+                                <td>
+                                    <%= doctorsData[index].mobilenumber %>
+                                </td>
+                                <td>
+                                    <%= doctorsData[index].email %>
+                                </td>
+                                <td>
+                                    <%= doctorsData[index].idnumber %>
+                                </td>
+                                <td>
+                                    <textarea cols="10" rows="2"><%= doctorsData[index].address %></textarea>
+                                </td>
+                                <td>
+                                    <%= doctorsData[index].gender %>
+                                </td>
+                                <td>
+                                    <textarea cols="10" rows="2"><%= doctorsData[index].specialities %></textarea>
+                                </td>
+                                <td>
+                                    <form action="edit/doctors/<%= doctorsData[index]._id %>" method="post">
+                                        <button type="submit">&#9998;</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="delete/doctors/<%= doctorsData[index]._id %> " method="post">
+                                        <button type="submit">&#10060;</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% } %>
+                </table>
+            </div>
+        </div>
+
+        <script src="" async defer></script>
+</body>
+
+</html>

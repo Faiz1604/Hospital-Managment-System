@@ -1,0 +1,32 @@
+.login-btn {
+    background-color: white;
+    border: 0px solid;
+    color: white;
+    border-radius: 50%;
+    background-color: #2277af;
+}
+
+.login-btn>img {
+    width: 40px;
+    height: 30px;
+}
+
+#navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top: 5px;
+    background-color: #2277af;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: gray;
+}
+
+.nav-link:focus {
+    color: gray;
+}

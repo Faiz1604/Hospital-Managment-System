@@ -1,0 +1,50 @@
+body {
+    background-image: url("./../images/doctors background.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.addpatient,
+.patientdetails,
+.dischargedpatients {
+    width: 20%;
+    height: 20%;
+    background-color: #2277afa6;
+    text-align: center;
+    cursor: pointer;
+}
+
+form {
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+    padding-bottom: 90px;
+    margin-top: 15%;
+    width: 100%;
+    height: 100%;
+    background-color: #0000;
+    color: aliceblue;
+    border-width: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

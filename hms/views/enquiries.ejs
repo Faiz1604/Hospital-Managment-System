@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="admin/style/enquiries.css">
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <h1 style="background-color: #2277af; color: aliceblue; margin-top: 20px; text-align: center;">ENQUIRIES</h1>
+        <div class="enquiry_table">
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Number</td>
+                            <td>Email</td>
+                            <td>Address</td>
+                            <td>Message</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for( var index =0; index < enquiry_data.length; index++) {%>
+                            <tr>
+
+                                <td>
+                                    <%= enquiry_data[index].Firstname+enquiry_data[index].Lastname %>
+                                </td>
+                                <td>
+                                    <%= enquiry_data[index].Number %>
+                                </td>
+                                <td>
+                                    <%= enquiry_data[index].email %>
+                                </td>
+
+                                <td>
+                                    <%= enquiry_data[index].Address %>
+                                </td>
+                                <td>
+                                    <textarea name="" id="" cols="40" rows="8"><%= enquiry_data[index].Message %></textarea>
+
+                                </td>
+                                <td>
+                                    <form action="/enquiry/delete/<%= enquiry_data[index]._id %>" method="post">
+                                        <button type="submit">&#10060;</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+body {
+    background-image: url("./../images/doctors background.jpg");
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    width: 40%;
+}
+
+@media screen and (max-width:900px) {
+    .form {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: white;
+        width: 80%;
+    }
+}
+
+form>h1 {
+    text-align: center;
+    background-color: #2277af;
+    color: aliceblue;
+    border-top: 2px solid #2277af;
+    border-radius: 2px;
+}
+
+#submitbutton {
+    background-color: #2277af;
+    font-weight: bolder;
+    font-size: x-large;
+    color: aliceblue;
+}

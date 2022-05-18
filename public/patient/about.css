@@ -1,0 +1,41 @@
+#founder-frame {
+    margin-top: 10px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#founder {
+    margin-top: 10px;
+    width: 450px;
+    height: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.content {
+    text-align: justify;
+    align-items: center;
+}
+
+.about-foundation {
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.about-founder {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+@media screen and (max-width:468px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

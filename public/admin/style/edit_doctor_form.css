@@ -1,0 +1,34 @@
+body {
+    background-image: url("./../images/doctors background.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    width: 100%;
+    background-color: #2277af;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form {
+    background-color: white;
+    width: 40%;
+    height: 100%;
+}
+
+#submit_button {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    background-color: #2277af;
+    color: aliceblue;
+}

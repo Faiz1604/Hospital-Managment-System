@@ -1,0 +1,17 @@
+thead {
+    background-color: #2277af;
+    color: aliceblue;
+}
+
+.enquiry_table {
+    color: #2277af;
+    border: 2px solid #2277af;
+    width: fit-content;
+    margin-left: 25%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td {
+    text-align: center;
+    border: 2px solid #2277af;
+}

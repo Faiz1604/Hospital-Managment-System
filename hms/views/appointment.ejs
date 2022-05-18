@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="admin/style/appointment.css">
+</head>
+<style>
+    h1 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #2277af;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <h1>APPOINTMENTS</h1>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Number</td>
+                        <td>Email</td>
+                        <td>Address</td>
+                        <td>Date</td>
+                        <td>Symptoms</td>
+                    </tr>
+                    <tbody>
+                        <% for(var index = 0; index<appointmentData.length;index++) {%>
+                            <tr>
+                                <td>
+                                    <%=appointmentData[index].firstname+ " "+ appointmentData[index].lastname  %>
+                                </td>
+                                <td>
+                                    <%= appointmentData[index].number %>
+                                </td>
+                                <td>
+                                    <%= appointmentData[index].email %>
+                                </td>
+                                <td>
+                                    <%= appointmentData[index].address %>
+                                </td>
+                                <td>
+                                    <%= appointmentData[index].date %>
+                                </td>
+                                <td>
+                                    <textarea name="" id="" cols="20" rows="5"><%= appointmentData[index].symptoms %></textarea>
+                                </td>
+                                <td>
+                                    <form action="delete/appointment/<%= appointmentData[index]._id %> " method="post">
+                                        <button type="submit">&#10060;</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <script src="" async defer></script>
+</body>
+
+</html>

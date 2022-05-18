@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Adminn</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="adminnavbar.css">
+</head>
+<!--<style>
+    body {
+        background-image: url("./images/admin\ background.jpg");
+        height: 650px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>-->
+
+<body>
+    <!--<div class="container-fluid">
+        >
+        <nav id="navigation" class="navbar navbar-expand-sm navbar-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontent" area-control="#navbarcontent">
+                <span>&#9776;</span>
+            </button>
+            <div id="navbarcontent" class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <form action="/enquiry" method="get">
+                                <button id="enquiry" type="submit" class="nav">
+                            ENQUIRY
+                            </button></form>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><button id="doctors" >DOCTORS</button> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <form action="/appointment" method="get"><button id="appointment">
+                                APPOINTMENT
+                                </button></form>
+                        </a>
+
+                    </li>
+                    <li ></li>
+                </ul>
+            </div>
+        </nav>
+    </div>-->
+
+    <div id="admin" class="row">
+        <div>
+            <form action="/enquiry" method="get">
+                <button id="enquiry">
+            <h1>ENQUIRY</h1>
+            </button></form>
+        </div>
+        <div>
+            <button id="doctors">
+            <h1>DOCTORS</h1>
+            </button></div>
+        <div>
+            <form action="/appointment" method="get"><button id="appointment">
+                <h1>APPOINMENT</h1>
+                </button></form>
+        </div>
+        <div>
+            <button id="patient">
+                    <h1>PATIENTS</h1>
+                    </button></div>
+
+    </div>
+
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <script src="admin.js"></script>
+</body>
+
+</html>

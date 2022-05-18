@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Patient</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/adding_patient_form.css">
+</head>
+
+<body>
+
+    <div class=" container">
+
+        <div class="form-content">
+            <form action="/addpatient" method="post">
+                <h1>FILL PATIENT DETAILS</h1>
+                <div class="form-group">
+                    <label for="firstname">FirstName</label>
+                    <input type="text" id="firstname" class="form-control" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">LastName</label>
+                    <input type="text" id="lastname" class="form-control" name="lastname" required>
+                </div>
+                <label for="dateofbirth">D.O.B</label>
+                <input type="date" id="dateofbirth" class="form-control" name="dateofbirth">
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <label for="gender">Male</label>
+                    <input type="radio" id="gender" name="gender" value="male">
+                    <label for="gender">Female</label>
+                    <input type="radio" id="gender" name="gender" value="female">
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <label for="">Bed Alloted</label><br>
+                    <hr>
+                    <label for="bedalloted">Yes</label>
+                    <input type="radio" id="bedalloted" name="bedalloted" value="yes">
+                    <label for="bedalloted">No</label>
+                    <input type="radio" id="bedalloted" name="bedalloted" value="No">
+                    <hr>
+                    <label for="bedalloteddate">Bed Allotment Date</label>
+                    <input type="date" id="bedallotededdate" class="form-control" name="bedalloteddate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bednumber">
+                       Assigned Bed Number 
+                    </label>
+                    <input type="tel" id="bednumber" class="form-control" name="bednumber">
+                </div>
+                <div class="form-group">
+                    <label for="mobilenumber">Mobile NO:</label>
+                    <input type="tel" id="mobilenumber" class="form-control" name="mobilenumber" required minlength="10" maxlength="10">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="assigneddoctor">Assigned Doctor</label>
+                    <input type="text" id="assigneddoctor" class="form-control" name="assigneddoctor" required>
+                </div>
+                <div class="form-group">
+                    <label for="doctorid">Doctor Id</label>
+                    <input type="tel" id="doctorid" class="form-control" name="doctorid" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" class="form-control" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Admit Date</label>
+                    <input type="date" id="date" class="form-control" name="admitdate" required>
+                </div>
+                <button type="submit" id="submit_button" class="form-control">SUBMIT</button>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin="anonymous "></script>
+    <script src="" async defer></script>
+</body>
+
+</html>

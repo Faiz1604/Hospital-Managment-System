@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/admin/style/patientsdetails.css">
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <h1 style="text-align: center; color: aliceblue; background-color: #2277af;">Patients DETAILS</h1>
+        <div class="container">
+            <div class="table-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>D.O.B</td>
+                            <td>Gender</td>
+                            <td>Bed Alloted</td>
+                            <td>Bed Allotment Date</td>
+                            <td>Bed Number</td>
+                            <td>MobileNumber</td>
+                            <td>Email</td>
+                            <td>Assigned Doctor</td>
+                            <td>Doc Id</td>
+                            <td>Address</td>
+
+                            <td>Date</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var index= 0; index<patientsData.length;index++) {%>
+                            <% if (patientsData[index].discharged == false) { %>
+
+
+                                <tr>
+                                    <td>
+                                        <%= patientsData[index].firstname+" "+ patientsData[index].lastname %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].dateofbirth %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].gender %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].bedalloted %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].bedalloteddate %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].bednumber %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].mobilenumber %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].email %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].assigneddoctor %>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].doctorid %>
+                                    </td>
+                                    <td>
+                                        <textarea cols="10" rows="2"><%= patientsData[index].address %></textarea>
+                                    </td>
+                                    <td>
+                                        <%= patientsData[index].admitdate %>
+                                    </td>
+                                    <!-- <td>
+                                        <form action="/edit/patient/<%= patientsData[index]._id %>" method="post">
+                                            <button type="submit">&#9998;</button>
+                                        </form>
+                                    </td> -->
+                                    <td>
+                                        <form action="/discharge/patient/<%= patientsData[index]._id %>" method="post">
+                                            <button type="submit">&#10060;</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% } %>
+                </table>
+                <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+                <script src="" async defer></script>
+</body>
+
+</html>

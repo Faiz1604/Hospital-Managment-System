@@ -1,0 +1,15 @@
+.mainpage {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hospitallogo {
+    background-color: rgb(41, 178, 174);
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+    height: 75px;
+}

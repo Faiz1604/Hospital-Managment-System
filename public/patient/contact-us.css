@@ -1,0 +1,52 @@
+.locations {
+    margin: 10px;
+}
+
+.text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.contact-us {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.enquiry-form {
+    margin: 50px 25% 25px 25%;
+    border-top: 1px solid #2277af;
+    border-bottom: 1px solid #2277afd8;
+}
+
+#submit-btn {
+    background-color: #2277af;
+    margin-top: 25px;
+}
+
+@media screen and (max-width:575px) {
+    .enquiry-form {
+        margin: 0 0 0 0;
+    }
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+    align-content: center;
+}
+
+.locations>div {
+    margin: 25px;
+}
+
+@media screen and (max-width:575px) {
+    .locations {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
